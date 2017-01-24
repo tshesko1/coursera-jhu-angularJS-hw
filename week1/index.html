@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Lunch Checker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <style>
+    .message { font-size: 1.3em; font-weight: bold; }
+  </style>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</head>
+<body ng-app="LunchCheck" ng-controller="LunchCheckController">
+  <div class="container">
+    <h1>Lunch Checker</h1>
+
+    <div class="form-group has-{{msg.class}}">
+      <p class="text-center text-danger">Empty Strings between Commas will be ignored while counting the items.</p>
+      <input id="lunch-menu" type="text" ng-model="items.Str"
+        placeholder="list comma separated dishes you usually have for lunch"
+        class="form-control box-shadow"> <!-- ng-trim="true" -->
+    </div>
+    <div class="form-group">
+      <button ng-click="checkIfTooMuch()"
+        class="btn btn-default">Check If Too Much</button>
+    </div>
+    <div ng-show="msg" class="form-group message text-{{msg.class}}">
+      <!-- Your message can go here. -->
+      {{msg.text}}
+
+      <!-- Testing Purpose - - >
+      <div>{{items.Count}} / {{items.Array.length}} : {{items.Array}}</div -->
+    </div>
+  </div>
+</body>
+</html>

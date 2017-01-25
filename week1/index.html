@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="styles/bootstrap.min.css">
   <style>
     .message { font-size: 1.3em; font-weight: bold; }
+    .Sample  { font-size: 1.2em; font-weight: bold; border: 1px black solid; }
   </style>
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
@@ -22,7 +23,7 @@
     </div>
     <div class="form-group">
       <button ng-click="checkIfTooMuch()"
-        class="btn btn-default">Check If Too Much</button>
+        class="btn btn-primary">Check If Too Much</button>
     </div>
     <div ng-show="msg" class="form-group message text-{{msg.class}}">
       <!-- Your message can go here. -->
@@ -30,6 +31,10 @@
 
       <!-- Testing Purpose - - >
       <div>{{items.Count}} / {{items.Array.length}} : {{items.Array}}</div -->
+    </div>
+    <div class="text-center">
+      <div class="message">Sample list of items used to test the app</div>
+      <div class="Sample"><pre>, hjj,, sfhjgks45,     , kl, gfh768</pre></div>
     </div>
   </div>
 </body>
